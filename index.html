@@ -1,0 +1,318 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Reimagine Truth - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .slide-in {
+            animation: slideIn 1s ease-in-out;
+        }
+        .button-click {
+            animation: buttonClick 0.2s ease-in-out;
+        }
+        @keyframes buttonClick {
+            0% { transform: scale(1); }
+            50% { transform: scale(0.9); }
+            100% { transform: scale(1); }
+        }
+        .light-mode {
+            background-color: #ffffff;
+            color: #1a202c;
+        }
+        .light-mode .bg-gray-800 {
+            background-color: #f7fafc;
+        }
+        .light-mode .text-gray-200 {
+            color: #1a202c;
+        }
+        .light-mode .text-gray-400 {
+            color: #4a5568;
+        }
+        .light-mode .bg-gray-700 {
+            background-color: #edf2f7;
+        }
+        .light-mode .bg-gray-900 {
+            background-color: #ffffff;
+        }
+        .light-mode .border-gray-700 {
+            border-color: #e2e8f0;
+        }
+        .light-mode .text-blue-500 {
+            color: #3182ce;
+        }
+        .light-mode .hover\:bg-gray-600:hover {
+            background-color: #e2e8f0;
+        }
+        .nav-link {
+            transition: color 0.3s ease-in-out;
+        }
+        .nav-link:hover {
+            color: #63B3ED;
+        }
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            background: white;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: fall 10s linear infinite;
+        }
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+        .fade-in-up {
+            animation: fadeInUp 1s ease-in-out;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .bottom-drawer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #2d3748;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+            flex-wrap: wrap;
+        }
+        .bottom-drawer a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0.5rem;
+            flex: 1 1 20%;
+            max-width: 100px;
+        }
+        .bottom-drawer a:hover {
+            color: #63B3ED;
+        }
+        .bottom-drawer i {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-black text-gray-200">
+    <header class="bg-gray-800 p-4 text-center relative">
+        <h1 class="text-2xl md:text-3xl font-bold text-white" id="header-title">Reimagine Truth</h1>
+        <div class="absolute top-4 right-4 flex space-x-2">
+            <button class="p-2 bg-gray-700 text-white rounded-full hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-transform transform hover:scale-110" id="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="p-2 bg-gray-700 text-white rounded-full hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-transform transform hover:scale-110" id="snow-toggle">
+                <i class="fas fa-snowflake"></i>
+            </button>
+        </div>
+    </header>
+    <!-- Desktop Navigation -->
+    <nav class="bg-black p-4 hidden md:block" id="desktop-menu">
+        <ul class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6 text-lg">
+            <li>
+                <a class="nav-link flex items-center" href="home.html">
+                    <i class="fas fa-home mr-2"></i>
+                    Home
+                </a>
+            </li>
+            <li>
+                <a class="nav-link flex items-center" href="my-assets.html">
+                    <i class="fas fa-wallet mr-2"></i>
+                    My Assets
+                </a>
+            </li>
+            <li>
+                <a class="nav-link flex items-center" href="about.html">
+                    <i class="fas fa-info-circle mr-2"></i>
+                    About
+                </a>
+            </li>
+            <li>
+                <a class="nav-link flex items-center" href="community.html">
+                    <i class="fas fa-users mr-2"></i>
+                    Community
+                </a>
+            </li>
+            <li>
+                <a class="nav-link flex items-center" href="news.html">
+                    <i class="fas fa-newspaper mr-2"></i>
+                    News
+                </a>
+            </li>
+            <li>
+                <a class="nav-link flex items-center" href="settings.html">
+                    <i class="fas fa-cog mr-2"></i>
+                    Settings
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Mobile Navigation -->
+    <button aria-label="Toggle Menu" class="md:hidden text-gray-200 p-4 absolute top-4 left-4" id="menu-button">
+        <span class="fas fa-bars"></span>
+    </button>
+    <nav class="bg-black p-4 md:hidden" id="mobile-menu" style="display: none;">
+        <ul class="flex flex-col space-y-4 text-lg">
+            <li>
+                <a class="nav-link flex items-center" href="home.html">
+                    <i class="fas fa-home mr-2"></i>
+                    Home
+                </a>
+            </li>
+            <li>
+                <a class="nav-link flex items-center" href="my-assets.html">
+                    <i class="fas fa-wallet mr-2"></i>
+                    My Assets
+                </a>
+            </li>
+            <li>
+                <a class="nav-link flex items-center" href="about.html">
+                    <i class="fas fa-info-circle mr-2"></i>
+                    About
+                </a>
+            </li>
+            <li>
+                <a class="nav-link flex items-center" href="community.html">
+                    <i class="fas fa-users mr-2"></i>
+                    Community
+                </a>
+            </li>
+            <li>
+                <a class="nav-link flex items-center" href="news.html">
+                    <i class="fas fa-newspaper mr-2"></i>
+                    News
+                </a>
+            </li>
+            <li>
+                <a class="nav-link flex items-center" href="settings.html">
+                    <i class="fas fa-cog mr-2"></i>
+                    Settings
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="fixed bottom-0 left-0 right-0 bg-black text-white" id="footer">
+        <div class="flex justify-around items-center py-2 sm:py-4">
+            <div class="flex flex-col items-center">
+                <i class="fas fa-home text-xl sm:text-2xl"></i>
+                <span class="text-xs sm:text-sm">Home</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <i class="fas fa-tv text-xl sm:text-2xl"></i>
+                <span class="text-xs sm:text-sm">Video</span>
+            </div>
+            <div class="relative flex flex-col items-center">
+                <i class="fas fa-store text-xl sm:text-2xl"></i>
+                <span class="text-xs sm:text-sm">Marketplace</span>
+                <span class="absolute top-0 right-0 bg-red-600 text-xs rounded-full px-1">1</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <i class="fas fa-heart text-xl sm:text-2xl"></i>
+                <span class="text-xs sm:text-sm">Dating</span>
+            </div>
+            <div class="relative flex flex-col items-center">
+                <i class="fas fa-bell text-xl sm:text-2xl"></i>
+                <span class="text-xs sm:text-sm">Notifications</span>
+                <span class="absolute top-0 right-0 bg-red-600 text-xs rounded-full px-1">1</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <i class="fas fa-user-circle text-xl sm:text-2xl"></i>
+                <span class="text-xs sm:text-sm">Menu</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('bg-black');
+            document.body.classList.toggle('bg-white');
+            document.body.classList.toggle('text-gray-200');
+            document.body.classList.toggle('text-gray-900');
+            document.body.classList.toggle('light-mode');
+            themeToggle.innerHTML = document.body.classList.contains('light-mode') ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+            document.getElementById('header-title').classList.toggle('text-white');
+            document.getElementById('header-title').classList.toggle('text-gray-900');
+            document.getElementById('footer').classList.toggle('bg-black');
+            document.getElementById('footer').classList.toggle('bg-white');
+            document.getElementById('footer').classList.toggle('text-white');
+            document.getElementById('footer').classList.toggle('text-gray-900');
+            document.getElementById('mobile-menu').classList.toggle('bg-black');
+            document.getElementById('mobile-menu').classList.toggle('bg-white');
+            document.getElementById('mobile-menu').classList.toggle('text-white');
+            document.getElementById('mobile-menu').classList.toggle('text-gray-900');
+            document.getElementById('desktop-menu').classList.toggle('bg-black');
+            document.getElementById('desktop-menu').classList.toggle('bg-white');
+            document.getElementById('desktop-menu').classList.toggle('text-white');
+            document.getElementById('desktop-menu').classList.toggle('text-gray-900');
+        });
+
+        // Christmas Effect
+        let snowInterval;
+        const snowToggle = document.getElementById('snow-toggle');
+        snowToggle.addEventListener('click', () => {
+            if (snowInterval) {
+                clearInterval(snowInterval);
+                snowInterval = null;
+                snowToggle.innerHTML = '<i class="fas fa-snowflake"></i>';
+            } else {
+                snowInterval = setInterval(createSnowflake, 200);
+                snowToggle.innerHTML = '<i class="fas fa-snowflake text-blue-500"></i>';
+            }
+        });
+
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.style.left = Math.random() * window.innerWidth + 'px';
+            snowflake.style.animationDuration = Math.random() * 3 + 7 + 's';
+            snowflake.style.opacity = Math.random();
+            snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
+            document.body.appendChild(snowflake);
+
+            setTimeout(() => {
+                snowflake.remove();
+            }, 10000);
+        }
+
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuButton.addEventListener('click', () => {
+            mobileMenu.style.display = mobileMenu.style.display === 'none' ? 'block' : 'none';
+        });
+    </script>
+</body>
+</html>
